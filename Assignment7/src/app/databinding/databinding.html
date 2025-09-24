@@ -1,0 +1,14 @@
+
+<h1>Property and Event Binding</h1>
+<button
+(click) = "onButtonClick()"
+[style.backgroundColor] = "buttonColor">
+Click Me</button>
+<br> <br>
+ <!-- Input the value and only show when the boolean is true. -->
+<label for="input">Enter Value:</label>
+<input 
+    id="input"
+    [(ngModel)]="inputText"
+    placeholder="Type something here...">
+<p *ngIf="isButtonOn">{{ inputText }}</p>
