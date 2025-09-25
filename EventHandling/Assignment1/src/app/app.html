@@ -1,1 +1,5 @@
-<app-random-number></app-random-number>
+<app-random-number (resultGenerated)="handleResultGenerated($event)"></app-random-number>
+
+<hr>
+
+<app-divide-result [baseResult]="finalResult"></app-divide-result>

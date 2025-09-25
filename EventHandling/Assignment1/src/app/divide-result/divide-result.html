@@ -1,0 +1,17 @@
+<h2>Divide the Result</h2>
+<label>
+  Select a number to divide with:
+  <select [(ngModel)]="divisor" name="divisor">
+    <option *ngFor="let n of [2,3,4,5,6,7,8,9,10]" [value]="n">
+      {{ n }}
+    </option>
+  </select>
+</label>
+
+<br><br>
+
+<button type="submit" (click)="onDivide()">Divide Result</button>
+
+<div *ngIf="divisionResult !== 0">
+  <p>{{ baseResult }} ÷ {{ divisor }} = {{ divisionResult }}</p>
+</div>

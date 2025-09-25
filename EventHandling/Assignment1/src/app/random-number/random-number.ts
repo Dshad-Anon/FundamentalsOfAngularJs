@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -12,8 +12,14 @@ export class RandomNumber {
   result = 0;
   randomNumber = 0;
   inputNumber = 0;
+
+  //Emit result to parent 
+  @Output() resultGenerated = new EventEmitter<number>();
+
   generateRandomNumber(){
     this.randomNumber = Math.floor(Math.random()*100)+ 1;
     this.result = this.randomNumber + this.inputNumber;
+
+    this.resultGenerated.emit(this.result);
   }
 }
