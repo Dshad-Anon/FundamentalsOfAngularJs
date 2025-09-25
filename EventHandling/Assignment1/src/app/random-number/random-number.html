@@ -1,5 +1,13 @@
 <div>
-    <h1>Random Number Generator(1-100)</h1>
-    <button (click)="generateRandomNumber()">Generate Random Number</button>
-    <p *ngIf="randomNumber !== null">Random number is: <strong>{{randomNumber}}</strong></p>   
+
+  <h1>Random Number Generator</h1>
+  <input type="number" [(ngModel)]="inputNumber" placeholder="Enter a number"/>
+  <br><br>
+
+  <button (click)="generateRandomNumber()">Generate Random Number</button>
+
+  <div *ngIf="result !== 0">
+    <p>{{randomNumber}}+ {{inputNumber}} = {{result}}</p>
+  </div>
+
   </div>
