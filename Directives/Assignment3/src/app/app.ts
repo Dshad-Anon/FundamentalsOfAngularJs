@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { TextColor } from './text-color';
-import { FontSize } from './font-size';
+import { ImageToggle } from './image-toggle/image-toggle';
+
 @Component({
   selector: 'app-root',
-  imports: [TextColor,FontSize],
+  imports: [ImageToggle],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  title = 'Text Color Angular App';
+  protected readonly title = signal('Assignment3');
 }
