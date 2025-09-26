@@ -2,3 +2,22 @@
 <hr>
 <h1>Json Pipe AssignmentNo5</h1>
 <app-json-pipe></app-json-pipe>
+
+<hr>
+<h1>AssignmentNo7</h1>
+<div class="container">
+  <h2>String Transformer</h2>
+
+  <input 
+    type="text" 
+    [(ngModel)]="userInput" 
+    placeholder="Enter your string"
+  />
+
+  <button (click)="onSubmit()">Transform</button>
+
+  <div *ngIf="submittedValue">
+    <p><strong>Original:</strong> {{ submittedValue }}</p>
+    <p><strong>Transformed:</strong> {{ submittedValue | stringTransform }}</p>
+  </div>
+</div>
