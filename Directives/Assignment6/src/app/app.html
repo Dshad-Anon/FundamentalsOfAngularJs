@@ -1,0 +1,9 @@
+<div class="container" style="text-align: center; margin-top: 50px;">
+  <h1>Hover the button!</h1>
+  <p>This is a simple example of using a custom structural directive.</p>
+   <button appChangeBg (click)="toggleMessage()">I am a button!</button>
+
+  <div *ngIf="showMessage" style="margin-top: 15px; font-weight: bold; color: green;">
+    ✅ You clicked the button!
+  </div>
+</div>

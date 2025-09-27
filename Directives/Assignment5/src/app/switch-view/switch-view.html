@@ -1,0 +1,24 @@
+<div style="text-align: center; margin-top: 50px;">
+  <button (click)="selectedView='name'">Name</button>
+  <button (click)="selectedView='age'">Age</button>
+  <button (click)="selectedView='job'">Job</button>
+
+  <div [ngSwitch]="selectedView" style="margin-top: 20px; text-align: left;">
+    <div *ngSwitchCase="'name'">
+      <h2>Name</h2>
+      <p>My name is Shiva.</p>
+    </div>
+    <div *ngSwitchCase="'age'">
+      <h2>Age</h2>
+      <p>I am 24 years old.</p>
+    </div>
+    <div *ngSwitchCase="'job'">
+      <h2>Job</h2>
+      <p>I am a Student of Information Technology.</p>
+    </div>
+    <div *ngSwitchDefault>
+      <h2>Welcome</h2>
+      <p>Please select a view above.</p>
+    </div>
+  </div>
+</div>
