@@ -1,0 +1,16 @@
+.timeline {
+  border-left: 4px solid #007acc;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+.timeline-item {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.timeline-item h3 {
+  margin: 0;
+  color: #007acc;
+}
+.timeline-item p {
+  margin: 5px 0 0;
+}
