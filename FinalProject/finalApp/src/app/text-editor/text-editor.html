@@ -1,0 +1,12 @@
+<!-- src/app/text-editor/text-editor.component.html -->
+<div class="text-editor">
+  <h2>Text Editor</h2>
+
+  <textarea [(ngModel)]="text" rows="6" cols="30"></textarea>
+
+  <div class="buttons">
+    <button (click)="convertToUpper()">Convert to Uppercase</button>
+    <button (click)="convertToLower()">Convert to Lowercase</button>
+    <button (click)="clearText()">Clear Text</button>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.text-editor {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.text-editor textarea {
+  width: 80%;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.text-editor button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.text-editor .buttons {
+  margin-top: 20px;
+}
