@@ -1,0 +1,38 @@
+<div class="quiz-container">
+  <h2>❓ Quiz</h2>
+
+  <form (ngSubmit)="submit()" *ngIf="!submitted">
+    <div *ngFor="let item of questions; let i = index" class="question-card">
+      <div class="question"><strong>Q{{i+1}}.</strong> {{item.q}}</div>
+      <div class="options">
+        <label *ngFor="let c of item.choices; let j = index" class="option">
+          <input type="radio" name="q{{i}}" [value]="j"
+                 (change)="select(i,j)"
+                 [checked]="answers[i]===j" />
+          {{c}}
+        </label>
+      </div>
+    </div>
+    <div class="buttons">
+      <button type="submit">Submit</button>
+      <button type="button" (click)="reset()">Reset</button>
+    </div>
+  </form>
+
+  <div *ngIf="submitted" class="results">
+    <h3>Results</h3>
+    <p>You got <strong>{{score}} / {{questions.length}}</strong> correct.</p>
+
+    <div *ngIf="wrongIds.length > 0" class="feedback">
+      <h4>Review</h4>
+      <ul>
+        <li *ngFor="let id of wrongIds">
+          Q{{id+1}}: Correct answer is 
+          <strong>{{questions[id].choices[questions[id].answer]}}</strong>
+        </li>
+      </ul>
+    </div>
+
+    <button (click)="reset()">Try Again</button>
+  </div>
+</div>
