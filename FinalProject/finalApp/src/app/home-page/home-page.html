@@ -1,10 +1,57 @@
-<div class="home-page">
-  <h1>Welcome to My Project</h1>
-  <p>This project includes four different views:</p>
-  <ul>
-    <li><b>Home Page</b>: Overview of the app.</li>
-    <li><b>Calculator</b>: A simple calculator to perform basic arithmetic operations.</li>
-    <li><b>Text Editor</b>: A basic text editor with some formatting options.</li>
-    <li><b>Weather API</b>: Fetches weather information for a city in Finland.</li>
-  </ul>
+<div class="home-container">
+  <h1>Welcome to the Angular Final Project</h1>
+  <p>
+    This application demonstrates four different views built with Angular.
+    Each view has a unique purpose and functionality.
+  </p>
+
+  <div class="card">
+    <h2>🏠 Home</h2>
+    <p>
+      The Home page (this page) introduces the app and describes the purpose
+      of each view. It also contains navigation links to quickly access them.
+    </p>
+    <a routerLink="/">Stay Here</a>
+  </div>
+
+  <div class="card">
+    <h2>🧮 Calculator</h2>
+    <p>
+      A simple calculator that supports basic arithmetic operations:
+      addition, subtraction, multiplication, and division.
+      <br><br>
+      <strong>How it was done:</strong> Built using Angular’s
+      <code>[(ngModel)]</code> for two-way binding, with buttons triggering
+      functions that perform calculations and update the result in real-time.
+    </p>
+    <a routerLink="/calculator">Go to Calculator</a>
+  </div>
+
+  <div class="card">
+    <h2>✍️ Text Editor</h2>
+    <p>
+      A small text editor where you can type freely and apply simple text
+      transformations. You can convert text to uppercase, lowercase, or
+      count words.
+      <br><br>
+      <strong>How it was done:</strong> A textarea is bound to a variable
+      with <code>[(ngModel)]</code>, and buttons trigger string
+      manipulation methods in the component.
+    </p>
+    <a routerLink="/text-editor">Go to Text Editor</a>
+  </div>
+
+  <div class="card">
+    <h2>❓ Quiz</h2>
+    <p>
+      A multiple-choice quiz with three questions. After submitting, you
+      see your score and the correct answers for any you missed.
+      <br><br>
+      <strong>How it was done:</strong> Questions are stored as objects
+      in an array. User answers are compared to the correct ones when the
+      quiz is submitted, and results are displayed dynamically.
+    </p>
+    <a routerLink="/quiz">Go to Quiz</a>
+  </div>
 </div>
+<router-outlet></router-outlet>
